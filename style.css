@@ -1,0 +1,70 @@
+@import url("https://fonts.googleapis.com/css2?family=Moo+Lah+Lah&display=swap");
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+a {
+  text-decoration: none;
+}
+
+li {
+  list-style: none;
+}
+
+body {
+  font-family: "Roboto", sans-serif;
+  font-size: 16px;
+  background: #f5f5f5;
+}
+
+.container {
+  max-width: 1024px;
+  margin: 0 auto;
+  padding: 0 20px;
+}
+
+header {
+  background-color: red;
+  color: white;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  height: 80px;
+}
+
+.logo {
+  font-family: "Moo Lah Lah", cursive;
+}
+
+header nav {
+  position: absolute;
+  top: 80px;
+  left: 0;
+  background-color: red;
+  height: 50vh;
+  width: 100%;
+  border-top: 1px solid gray;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  transition: all 0.5s linear;
+  clip-path: polygon(0 0, 100% 0, 100% 0, 0 0);
+}
+
+.showNav {
+  clip-path: polygon(0 0, 100% 0, 100% 100%, 0% 100%);
+}
+header li {
+  margin-top: 15px;
+  text-transform: uppercase;
+  cursor: pointer;
+  opacity: 0.8;
+  transition: opacity 0.5s ease-in;
+}
+
+header li:hover {
+  opacity: 1;
+}
