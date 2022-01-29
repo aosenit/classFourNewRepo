@@ -21,6 +21,8 @@ body {
   font-family: "Roboto", sans-serif;
   font-size: 16px;
   background: #f5f5f5;
+  max-width: 1024px;
+  margin: 0 auto;
 }
 
 img {
@@ -138,7 +140,7 @@ span {
 }
 
 #hero h2 {
-  font-size: 1.8rem;
+  font-size: 1.3rem;
   padding-bottom: 1.5rem;
 }
 
@@ -318,4 +320,77 @@ footer .icons i {
 
 footer .icons i:hover {
   opacity: 1;
+}
+
+@media only screen and (min-width: 760px) {
+  .aboutContent {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    gap: 1rem;
+  }
+
+  .aboutContent .aboutImage {
+    flex: 1;
+  }
+
+  .aboutContent .aboutImage img {
+    border-radius: 20px;
+  }
+
+  .aboutContent .aboutText {
+    flex: 1;
+  }
+
+  #portfolio .grid {
+    grid-template-columns: 1fr 1fr;
+  }
+}
+
+@media only screen and (min-width: 1024px) {
+  header .menu {
+    display: none;
+  }
+  header nav {
+    position: static;
+    clip-path: polygon(0 0, 100% 0, 100% 100%, 0% 100%);
+    height: fit-content;
+    justify-content: flex-end;
+    margin: 0;
+    padding: 0;
+    border: none;
+  }
+
+  header nav ul {
+    display: flex;
+    gap: 2rem;
+    margin: 0;
+    padding: 0;
+  }
+
+  header nav ul li {
+    margin: 0;
+    padding: 0;
+    font-size: 0.8rem;
+  }
+
+  #about,
+  #portfolio,
+  #contact {
+    padding-top: 3rem;
+    padding-bottom: 3rem;
+  }
+
+  #portfolio .grid {
+    grid-template-columns: 1fr 1fr 1fr;
+  }
+
+  #portfolio .gridItem img {
+    height: 60%;
+  }
+
+  #contact form {
+    width: 60%;
+    margin: 0 auto;
+  }
 }
